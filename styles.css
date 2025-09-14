@@ -1,0 +1,36 @@
+/* Part 1: CSS Animations */
+.hover-btn {
+  padding: 10px 20px;
+  background: teal;
+  color: white;
+  border: none;
+  transition: background 0.3s, transform 0.3s;
+}
+.hover-btn:hover {
+  background: darkcyan;
+  transform: scale(1.1);
+}
+
+/* Simple keyframe fade animation */
+.fade-box {
+  width: 100px; height: 100px;
+  margin: 20px;
+  background: coral;
+  animation: fadeSlide 3s infinite;
+}
+@keyframes fadeSlide {
+  0%   { opacity: 0; transform: translateX(-20px); }
+  50%  { opacity: 1; transform: translateX(20px); }
+  100% { opacity: 0; transform: translateX(-20px); }
+}
+
+/* Box that will be animated by JS */
+.box {
+  width: 100px; height: 100px;
+  margin: 20px;
+  background: steelblue;
+  transition: transform 0.5s ease;
+}
+.box.move {
+  transform: rotate(45deg) scale(1.2);
+}
